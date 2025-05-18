@@ -1,7 +1,6 @@
 using System;
 using UnityEngine;
 using UnityEngine.UIElements;
-using UnityInspector;
 
 namespace UnityEssentials
 {
@@ -22,7 +21,7 @@ namespace UnityEssentials
             _poseSettings.SetMuscleEvent += (index, value) => _muscleController.SetMuscle(index, value);
         }
 
-        [Button]
+        //[Button]
         public void ApplyPose()
         {
             if (!_muscleController)
@@ -159,7 +158,7 @@ namespace UnityEssentials
             #endregion
         }
 
-        [Button]
+        //[Button]
         public void ResetPose()
         {
             _poseSettings = new();
