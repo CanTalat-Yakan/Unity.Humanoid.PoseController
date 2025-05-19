@@ -1,13 +1,13 @@
 using System;
 using UnityEngine;
-using UnityEngine.UIElements;
 
 namespace UnityEssentials
 {
     [RequireComponent(typeof(HumanoidMuscleController))]
     public class HumanoidPoseController : MonoBehaviour
     {
-        [SerializeField] private HumanoidPoseSettings _poseSettings = new();
+        [SerializeField] 
+        private HumanoidPoseSettings _poseSettings = new();
 
         private HumanoidMuscleController _muscleController;
 
@@ -21,7 +21,7 @@ namespace UnityEssentials
             _poseSettings.SetMuscleEvent += (index, value) => _muscleController.SetMuscle(index, value);
         }
 
-        //[Button]
+        [Button()]
         public void ApplyPose()
         {
             if (!_muscleController)
@@ -158,7 +158,7 @@ namespace UnityEssentials
             #endregion
         }
 
-        //[Button]
+        [Button()]
         public void ResetPose()
         {
             _poseSettings = new();
