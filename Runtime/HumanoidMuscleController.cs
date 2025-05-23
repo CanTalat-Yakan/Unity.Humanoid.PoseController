@@ -2,6 +2,13 @@ using UnityEngine;
 
 namespace UnityEssentials
 {
+    /// <summary>
+    /// Provides functionality to control and manipulate the muscle values of a humanoid avatar.
+    /// </summary>
+    /// <remarks>This class is designed to work with humanoid avatars in Unity. It allows for setting
+    /// individual muscle values by index, name, or predefined muscle enumeration, as well as resetting all muscles to
+    /// their default state. The class requires a valid humanoid <see cref="Avatar"/> to function correctly and must be
+    /// initialized before use.</remarks>
     public class HumanoidMuscleController : MonoBehaviour
     {
         [SerializeField] private Avatar _avatar;
@@ -86,104 +93,5 @@ namespace UnityEssentials
             for (int i = 0; i < HumanTrait.MuscleCount; i++)
                 Debug.Log($"{i}: {HumanTrait.MuscleName[i]}");
         }
-    }
-
-    public enum HumanBodyMuscles
-    {
-        SpineFrontBack,
-        SpineLeftRight,
-        SpineTwistLeftRight,
-        ChestFrontBack,
-        ChestLeftRight,
-        ChestTwistLeftRight,
-        UpperChestFrontBack,
-        UpperChestLeftRight,
-        UpperChestTwistLeftRight,
-        NeckNodDownUp,
-        NeckTiltLeftRight,
-        NeckTurnLeftRight,
-        HeadNodDownUp,
-        HeadTiltLeftRight,
-        HeadTurnLeftRight,
-        LeftEyeDownUp,
-        LeftEyeInOut,
-        RightEyeDownUp,
-        RightEyeInOut,
-        JawClose,
-        JawLeftRight,
-        LeftUpperLegFrontBack,
-        LeftUpperLegInOut,
-        LeftUpperLegTwistInOut,
-        LeftLowerLegStretch,
-        LeftLowerLegTwistInOut,
-        LeftFootUpDown,
-        LeftFootTwistInOut,
-        LeftToesUpDown,
-        RightUpperLegFrontBack,
-        RightUpperLegInOut,
-        RightUpperLegTwistInOut,
-        RightLowerLegStretch,
-        RightLowerLegTwistInOut,
-        RightFootUpDown,
-        RightFootTwistInOut,
-        RightToesUpDown,
-        LeftShoulderDownUp,
-        LeftShoulderFrontBack,
-        LeftArmDownUp,
-        LeftArmFrontBack,
-        LeftArmTwistInOut,
-        LeftForearmStretch,
-        LeftForearmTwistInOut,
-        LeftHandDownUp,
-        LeftHandInOut,
-        RightShoulderDownUp,
-        RightShoulderFrontBack,
-        RightArmDownUp,
-        RightArmFrontBack,
-        RightArmTwistInOut,
-        RightForearmStretch,
-        RightForearmTwistInOut,
-        RightHandDownUp,
-        RightHandInOut,
-        LeftThumb1Stretched,
-        LeftThumbSpread,
-        LeftThumb2Stretched,
-        LeftThumb3Stretched,
-        LeftIndex1Stretched,
-        LeftIndexSpread,
-        LeftIndex2Stretched,
-        LeftIndex3Stretched,
-        LeftMiddle1Stretched,
-        LeftMiddleSpread,
-        LeftMiddle2Stretched,
-        LeftMiddle3Stretched,
-        LeftRing1Stretched,
-        LeftRingSpread,
-        LeftRing2Stretched,
-        LeftRing3Stretched,
-        LeftLittle1Stretched,
-        LeftLittleSpread,
-        LeftLittle2Stretched,
-        LeftLittle3Stretched,
-        RightThumb1Stretched,
-        RightThumbSpread,
-        RightThumb2Stretched,
-        RightThumb3Stretched,
-        RightIndex1Stretched,
-        RightIndexSpread,
-        RightIndex2Stretched,
-        RightIndex3Stretched,
-        RightMiddle1Stretched,
-        RightMiddleSpread,
-        RightMiddle2Stretched,
-        RightMiddle3Stretched,
-        RightRing1Stretched,
-        RightRingSpread,
-        RightRing2Stretched,
-        RightRing3Stretched,
-        RightLittle1Stretched,
-        RightLittleSpread,
-        RightLittle2Stretched,
-        RightLittle3Stretched
     }
 }
