@@ -1,5 +1,5 @@
 {
-    "name": "UnityEssentials.HumanoidPoseController",
+    "name": "UnityEssentials.Humanoid.PoseController",
     "rootNamespace": "UnityEssentials",
     "references": [
         "GUID:3b3bf7f107ee18f49a6853ce8ac97a3d",
